@@ -11,15 +11,15 @@ namespace Ucu.Poo.Exercise
     /// <summary>
     /// Programa principal.
     /// </summary>
-    class Circuito
+    public static class Circuito
     {
-    public static bool Calcular(bool entradaA, bool entradaB, bool entradaC)
-    {
-        bool CableAND = entradaA && entradaB;
-        bool CableNOTAND = !entradaA && !entradaB;
-        bool CableOR = CableAND || CableNOTAND;
-        return CableOR && entradaC; 
-        }
+        public static bool Calcular(bool entradaA, bool entradaB, bool entradaC)
+        {
+            bool CableAND = entradaA && entradaB;
+            bool CableNOTAND = !entradaA && !entradaB;
+            bool CableOR = CableAND || CableNOTAND;
+            return CableOR && entradaC; 
+            }
 
         static void Main()
         {
