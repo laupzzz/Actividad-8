@@ -11,14 +11,20 @@ namespace Ucu.Poo.Exercise
     /// <summary>
     /// Programa principal.
     /// </summary>
-    public static class Program
+    class Circuito
     {
-        /// <summary>
-        /// Punto de entrada al programa principal.
-        /// </summary>
-        public static void Main()
+    public static bool Calcular(bool entradaA, bool entradaB, bool entradaC)
+    {
+        bool CableAND = entradaA && entradaB;
+        bool CableNOTAND = !entradaA && !entradaB;
+        bool CableOR = CableAND || CableNOTAND;
+        return CableOR && entradaC; 
+        }
+
+        static void Main()
         {
-            Console.WriteLine("Hello World!");
+            bool Salida = Calcular(false, false, true);
+            Console.WriteLine($"La Salida es: {Salida}");
         }
     }
 }
